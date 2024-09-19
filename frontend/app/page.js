@@ -112,7 +112,11 @@ export default function EventEase() {
     <div className="min-h-screen bg-gray-100">
       <header className="relative h-64 overflow-hidden">
         <img
-          src="/background.jpg"
+          src={
+            process.env.NODE_ENV === "production"
+              ? "/eventease/background.jpg"
+              : "/background.jpg"
+          }
           alt="Event crowd with raised hands"
           className="w-full h-full object-cover"
         />
