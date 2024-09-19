@@ -13,7 +13,7 @@
   "homepage": "https://github.com/vincefearing/eventease",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "deploy": "npm run build && gh-pages -d out"
+    "build": "next build && touch out/.nojekyll",
+    "deploy": "gh-pages -d out -t true"
   }
 }
